@@ -20,6 +20,7 @@ DHT22 Sensor → ESP32 (C Firmware) → MQTT → Cloud Broker → Python Anomaly
 
 ## Project Structure
 
+```
 esp32-temperature-anomaly-detection/
 ├── main/
 │   ├── main.c          # Main application - WiFi, MQTT, sensor loop
@@ -31,6 +32,7 @@ esp32-temperature-anomaly-detection/
 ├── wokwi.toml          # Wokwi simulator configuration
 ├── CMakeLists.txt      # Project build configuration
 └── README.md
+```
 
 ## Tech Stack
 
@@ -54,9 +56,13 @@ esp32-temperature-anomaly-detection/
 
 ### Firmware
 Install ESP-IDF v6.0, then:
+```bash
 idf.py build
+```
 Simulate with Wokwi VS Code extension
 
 ### Python
+```bash
 pip install paho-mqtt numpy matplotlib
 python subscriber.py
+```
